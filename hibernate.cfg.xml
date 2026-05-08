@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC 
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-.dtd">
+<hibernate-configuration>
+<session-factory>
+<!-- JDBC DRIVER -->
+<property name="hibernate.connection.driver_class">
+com.mysql.cj.jdbc.Driver
+</property>
+<!--  Database url -->
+<property name="hibernate.connection.url">
+jdbc:mysql://localhost:3306/hibernate
+</property>
+<!-- username -->
+<property name="hibernate.connection.username">
+root
+</property>
+<!-- Password -->
+<property name="hibernate.connection.password">
+Poornima@89
+</property>
+
+<!-- Dialect -->
+
+<!-- show sql -->
+<property name="hibernate.show_sql">
+true
+</property>
+<!-- Auto create/update table -->
+<property name="hibernate.hbm2ddl.auto">
+create</property>
+<!-- Mapping -->
+<mapping class="com.poorinma.MyHibernateLearning.mapping.ManytoOne.Department"/>
+<mapping class="com.poorinma.MyHibernateLearning.mapping.ManytoOne.Employee"/>
+
+
+</session-factory>
+</hibernate-configuration>
