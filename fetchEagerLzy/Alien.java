@@ -1,6 +1,7 @@
 package com.poorinma.MyHibernateLearning.fetchEagerLzy;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.Table;
 import jakarta.persistence.Id;
 import jakarta.persistence.Column;
@@ -19,7 +20,7 @@ import java.util.Date;
 @Entity
 
 public class Alien {
-    @OneToMany(mappedBy = "a1")
+    @OneToMany(mappedBy = "a1",fetch=FetchType.EAGER)
 
 	private List<laptop> lapi;
 	@Id
