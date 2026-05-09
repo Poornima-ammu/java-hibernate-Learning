@@ -13,10 +13,18 @@ public class App {
 		Transaction tx=session1.beginTransaction();
 		a=(Alien) session1.get(Alien.class, 101);
 		System.out.println(a);
-
-		a=(Alien) session1.get(Alien.class, 101);
-		System.out.println(a);
 		tx.commit();
+		session1.close();
+
+		Session session2=factory.openSession();
+		Transaction tx1=session2.beginTransaction();
+
+
+		a=(Alien) session2.get(Alien.class, 101);
+		System.out.println(a);
+		tx1.commit();
+		session2.close();
+
 		
 	}
 
